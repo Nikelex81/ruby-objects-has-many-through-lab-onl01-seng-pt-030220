@@ -1,20 +1,20 @@
 class Patient
   #body of a patient instance
   attr_accessor :name, :appointment, :doctor
-  @@appointment = []
+  @@all_appointment = []
   
   # Initialize with a name 
   def initialize(name)
     @name = name
     @appointment = appointment
     @doctor = doctor
-    @@appointment << self
+    @@all_appointment << self
     save
   end
   
   # Knows all patients
   def self.all
-    @@appointment
+    @@all_appointment
   end
   
   # returns all appointments associated with this Patient
@@ -33,7 +33,7 @@ class Patient
     Appointment.new(self, date, doctor)
   end
   def save
-    @@appointment << self
+    @@all_appointment << self
   end
 end
 
