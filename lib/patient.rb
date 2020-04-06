@@ -30,7 +30,7 @@ class Patient
   
   # giving a doctor and date, creates a new appointment belonging to that patient
   def new_appointment(doctor, date)
-    Appointment.new(patient, date, doctor)
+    Appointment.new(@patient, date, doctor)
   end
   # def save
   # @@all << self
