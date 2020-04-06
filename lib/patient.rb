@@ -1,4 +1,3 @@
-
 class Patient
   #body of a patient instance
   attr_accessor :name, :appointment, :doctor
