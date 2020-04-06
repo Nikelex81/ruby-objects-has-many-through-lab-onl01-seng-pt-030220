@@ -37,6 +37,8 @@ class Patient
   # end
 end
 
+Appointment.new(date, patient, doctor)
+
 # class Patient
 #   attr_accessor :name, :appointment, :doctor
 #   @@all = []
