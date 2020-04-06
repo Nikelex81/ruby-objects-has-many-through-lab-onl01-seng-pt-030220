@@ -8,13 +8,13 @@ class Patient
     @name = name
     @appointment = appointment
     @doctor = doctor
-    @@all << self
+    @@appointment << self
     save
   end
   
   # Knows all patients
   def self.all
-    @@all
+    @@appointment
   end
   
   # returns all appointments associated with this Patient
@@ -33,7 +33,7 @@ class Patient
     Appointment.new(self, date, doctor)
   end
   def save
-    @@all << self
+    @@appointment << self
   end
 end
 
