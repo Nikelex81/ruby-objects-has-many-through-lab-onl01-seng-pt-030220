@@ -1,7 +1,7 @@
 class Patient
   #body of a patient instance
   attr_accessor :name, :appointment, :doctor
-  @@all = []
+  @@appointment = []
   
   # Initialize with a name 
   def initialize(name)
