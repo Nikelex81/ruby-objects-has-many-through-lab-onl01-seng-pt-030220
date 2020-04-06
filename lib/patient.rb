@@ -9,7 +9,7 @@ class Patient
     @appointment = appointment
     @doctor = doctor
     @@all << self
-    # save
+    save
   end
   
   # Knows all patients
@@ -32,9 +32,9 @@ class Patient
   def new_appointment(doctor, date)
     Appointment.new(self, date, doctor)
   end
-  # def save
-  # @@all << self
-  # end
+  def save
+    @@all << self
+  end
 end
 
 # Appointment.new(date, patient, doctor)
